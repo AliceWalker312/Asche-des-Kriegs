@@ -1,0 +1,41 @@
+﻿capital = 113
+
+set_fuel_ratio = 0.20
+set_research_slots = 3
+set_stability = 0.60
+set_convoys = 20
+
+recruit_character = IRE_cathal_brugha
+recruit_character = IRE_l._t._mac_cosgair
+
+1910.1.1 = {
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		support_weapons = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#engineering
+		electrical_engineering = 1
+		basic_train = 1
+	}
+	set_politics = {
+	    ruling_party = democratic
+	    last_election = "1918.12.14"
+	    election_frequency = 48
+	    elections_allowed = yes
+	}
+	set_popularities = {
+	    democratic = 60
+	    fascism = 0
+	    communism = 5
+	    neutrality = 35
+	}	
+}

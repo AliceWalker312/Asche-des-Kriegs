@@ -1,0 +1,14 @@
+state={
+	id=788
+	name="STATE_788"
+	manpower=155000
+	state_category=rural
+	provinces={ 6857 9818 }
+	history={
+		owner = TUR
+		add_core_of = BUL
+		buildings={
+			infrastructure = 2
+		}
+	}
+}

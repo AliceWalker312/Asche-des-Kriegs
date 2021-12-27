@@ -1,0 +1,27 @@
+
+state={
+	id=756
+	name="STATE_756"
+
+	history={
+		victory_points = {
+			11842 10 
+		}
+		owner = TUR
+		add_core_of = TUR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory=1
+
+		}
+
+	}
+
+	provinces={
+		922 3893 11842 13060 13061
+	}
+	manpower=75000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

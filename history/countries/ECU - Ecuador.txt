@@ -1,0 +1,44 @@
+﻿capital = 305
+
+set_stability = 0.3
+set_convoys = 20
+set_country_flag = monroe_doctrine
+
+recruit_character = ECU_leónidas_plaza
+recruit_character = ECU_eloy_alfaro
+
+recruit_character = ECU_flavio_alfaro
+recruit_character = ECU_emilio_estrada
+recruit_character = ECU_freile_zaldumbide
+recruit_character = ECU_carlos_concha
+recruit_character = ECU_alfredo_baquerizo
+recruit_character = ECU_pedro_jacinto_montero
+
+oob = "ECU_1910"
+
+set_research_slots = 2
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+        support_weapons = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#engineering
+		basic_train = 1
+	}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1907.7.1" 
+	election_frequency = 48 
+	elections_allowed = yes 
+}	
+set_popularities = {
+	fascism = 0
+	communism = 1
+	democratic = 58
+	neutrality = 41
+}

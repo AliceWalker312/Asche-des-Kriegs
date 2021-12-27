@@ -1,0 +1,74 @@
+﻿capital = 105
+
+set_fuel_ratio = 0.20
+set_research_slots = 2
+set_stability = 0.60
+set_war_support = 0.78
+set_convoys = 1
+
+recruit_character = MNT_nikola_i
+
+recruit_character = MNT_danilo_i
+recruit_character = MNT_crown_prince_danilo
+recruit_character = MNT_janko_vukotić
+
+recruit_character = MNT_radomir_vesovic
+recruit_character = MNT_janko_vukotic
+recruit_character = MNT_milo_matanovic
+recruit_character = MNT_andrija_radovic
+recruit_character = MNT_masan_bozovic
+
+
+1910.1.1 = {
+	set_cosmetic_tag = MNT_principality
+	oob = "MNT_1910"
+	JAP = {
+		add_opinion_modifier = {
+			target = MNT
+			modifier  = MNT_montenegrin_japanese_war
+		}
+	}
+
+	MNT = {
+		add_opinion_modifier = {
+			target = JAP
+			modifier  = MNT_montenegrin_japanese_war
+		}
+	}
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		support_weapons = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+
+		#artillery
+		gw_artillery = 1
+
+		#navy
+		transport = 1
+		
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+	}
+
+	set_politics = {
+	    ruling_party = neutrality
+	    last_election = "1907.11.1"
+	    election_frequency = 48
+	    elections_allowed = no
+	}
+	set_popularities = {
+	    democratic = 19
+	    fascism = 0
+	    communism = 0
+	    neutrality = 81
+	}
+
+	add_ideas = {
+        serbian_sparta
+	}	
+}

@@ -1,0 +1,52 @@
+
+state={
+	id=6
+	name="STATE_6"
+	resources={
+		steel=5
+	}
+	history={
+		victory_points = {
+			516 30 
+		}
+		victory_points = {
+			6598 30 
+		}
+		victory_points = {
+			6560 5 
+		}
+		victory_points = {
+			6446 1 
+		}
+		victory_points = {
+			13081 1 
+		}
+		victory_points = {
+			13068 1 
+		}
+		victory_points = {
+			3516 5 
+		}
+		victory_points = {
+			11519 10 
+		}
+		owner = BEL
+		add_core_of = BEL
+		add_extra_state_shared_building_slots = 2
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+			6446 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces={
+		516 3516 3576 6446 6560 6598 9536 9574 11419 11519 13068 13081 
+	}
+	manpower=3247700
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

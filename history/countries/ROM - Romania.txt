@@ -1,0 +1,311 @@
+﻿capital = 46
+
+set_research_slots = 3
+set_stability = 0.75
+set_war_support = 0.5
+set_convoys = 13
+
+recruit_character = ROM_carol_i
+
+recruit_character = ROM_ferdinand_i
+
+recruit_character = ROM_constantin_prezan
+recruit_character = ROM_alexandru_averescu
+recruit_character = ROM_mihai_i
+recruit_character = ROM_prince_nicolae
+recruit_character = ROM_carol_ii
+recruit_character = ROM_kliment_boyadzhiev
+recruit_character = ROM_grigore_crăiniceanu
+recruit_character = ROM_ioan_culcer
+recruit_character = ROM_artur_văitoianu
+recruit_character = ROM_eremia_grigorescu
+recruit_character = ROM_ion_dragalina
+recruit_character = ROM_constantin_coandă
+recruit_character = ROM_nigrescu
+recruit_character = ROM_georgescu_i.
+recruit_character = ROM_sebestian
+recruit_character = ROM_balescu
+recruit_character = ROM_niculescurizea
+recruit_character = ROM_constantin_balescu
+recruit_character = ROM_constantin_niculescu_rizea
+recruit_character = ROM_istrate_micescu
+recruit_character = ROM_mihail_moruzov
+recruit_character = ROM_ioan_popescu
+recruit_character = ROM_aurel_vlad
+recruit_character = ROM_dumitru_iliescu
+recruit_character = ROM_constantin_cristescu
+recruit_character = ROM_constantin_coanda
+recruit_character = ROM_vintila_bratianu
+recruit_character = ROM_nicolae_titulescu
+recruit_character = ROM_artur_vaitoianu
+recruit_character = ROM_nicolae_negru
+recruit_character = ROM_alexandru_marghiloman
+recruit_character = ROM_vasile_zottu
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "David Bateson"
+		picture = "ROM_agent_47.dds"
+		traits = { operative_infiltrator operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = no
+		nationalities = { ROM USA }
+	}
+}
+
+
+1910.1.1 = {
+	oob = "ROM_1910"
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		tech_mountaineers = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+
+		#artillery
+		gw_artillery = 1
+
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+		basic_train = 1
+	}
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 21
+		fascism = 0
+		communism = 0
+		neutrality = 79
+	}
+
+	add_ideas = {
+		limited_conscription
+	}	
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+
+	set_naval_oob = "ROM_1910_naval_legacy"
+
+	#Protected Cruisers #
+	create_equipment_variant = {
+		name = "Elisabeta Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	# Minelayer #
+	create_equipment_variant = {
+		name = "Alexandru cel Bun Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	# Gunboats #
+	create_equipment_variant = {
+		name = "Grivița Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mircea Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	# Torpedo Boats #
+	create_equipment_variant = {
+		name = "Smeul Class"
+		type = destroyer_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Năluca Class"
+		type = destroyer_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Sborul Class"
+		type = destroyer_1
+		parent_version = 0
+		obsolete = yes
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		improved_light_battery = 1
+		advanced_light_battery = 1
+		basic_torpedo = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		mtg_transport = 1
+	}
+
+	set_naval_oob = "ROM_1910_naval_mtg"
+
+	# Protected Cruisers #
+	create_equipment_variant = {
+		name = "Elisabeta Class"
+		type = ship_hull_cruiser_1
+		name_group = ROM_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_3
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# Minelayers #
+	create_equipment_variant = {
+		name = "Alexandru cel Bun Class"
+		type = ship_hull_cruiser_1
+		name_group = ROM_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# Gunboats #
+	create_equipment_variant = {
+		name = "Grivița Class"
+		type = ship_hull_cruiser_1
+		name_group = ROM_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mircea Class"
+		type = ship_hull_cruiser_1
+		name_group = ROM_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# Torpedo Boats #
+	create_equipment_variant = {
+		name = "Smeul Class"
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Năluca Class"
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Sborul Class"
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+}

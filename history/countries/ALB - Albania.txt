@@ -1,0 +1,49 @@
+﻿capital = 44
+
+set_research_slots = 2
+set_stability = 0.15
+set_convoys = 5
+
+recruit_character = ALB_essad_pasha_toptani
+recruit_character = ALB_ismail_qemali
+recruit_character = ALB_vilhelm_i
+recruit_character = ALB_prenk_bib_doda
+recruit_character = ALB_izet_pashë_përmeti
+recruit_character = ALB_qamil_musa_haxhi_feza
+recruit_character = ALB_iljaz_vrioni
+recruit_character = ALB_mustafa_ndroqi
+recruit_character = ALB_xhafer_villa
+recruit_character = ALB_filip_noga
+
+
+1910.1.1 = {
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		support_weapons = 1
+		
+		#support
+		tech_support = 1
+		tech_recon = 1
+		
+		#armored
+		
+		#artillery
+		gw_artillery = 1
+		
+		#engineering
+		electrical_engineering = 1
+	}
+	set_politics={
+		ruling_party = democratic
+		last_election = "1908.11.28" 
+		election_frequency = 48 
+		elections_allowed = yes 
+	}	
+	set_popularities = {
+		fascism = 0
+		communism = 0
+		democratic = 40
+		neutrality = 60
+	}
+}

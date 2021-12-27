@@ -1,0 +1,20 @@
+state={
+	id=824
+	name="STATE_824" # Aydin
+	history={
+		owner=TUR
+		add_core_of=TUR
+		buildings={
+			infrastructure = 2
+			dockyard = 1    #Tersane-iamianei aydın kızağı
+			10038={ 
+				naval_base=3 
+			}
+		}
+	}
+	provinces={
+		9929 10038
+	}
+	manpower=200000 
+	state_category=rural
+}

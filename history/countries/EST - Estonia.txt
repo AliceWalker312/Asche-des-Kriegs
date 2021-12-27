@@ -1,0 +1,63 @@
+capital = 13
+
+set_research_slots = 3
+set_stability = 0.56
+set_convoys = 20
+
+recruit_character = EST_jaan_anvelt
+recruit_character = EST_konstantin_päts
+recruit_character = EST_jaan_tõnisson
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1910.1.1" 
+	election_frequency = 48 
+	elections_allowed = yes 
+}
+set_popularities = {
+    democratic = 55
+    fascism = 0
+    communism = 35
+    neutrality = 10
+}	
+
+1910.1.1 = {
+	
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		support_weapons = 1
+		motorised_infantry = 1
+		tech_mountaineers = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		
+		#armored
+		early_armored_car = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#doctrine
+		bayonet_assault = 1
+		
+		#navy
+		transport = 1
+
+		#air
+		early_fighter = 1
+		airship_bomber = 1
+		
+		#engineering
+		electrical_engineering = 1
+		radio = 1
+		mechanical_engineering = 1
+		aircraft_engine = 1
+		generator_battery = 1
+		basic_train = 1
+	}
+}

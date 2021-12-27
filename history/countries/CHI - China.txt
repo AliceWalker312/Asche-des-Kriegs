@@ -1,0 +1,78 @@
+﻿capital = 598
+set_research_slots = 2
+set_stability = 0.33
+set_war_support = 0.21
+set_convoys = 13
+
+give_military_access = RUS #Chinese Eastern Railway 
+give_military_access = JAP #South Manchuria Railway
+
+recruit_character = CHI_li_dazhao
+recruit_character = CHI_li_yuanhong
+recruit_character = CHI_huang_xing
+
+recruit_character = CHI_yuan_shikai
+
+recruit_character = CHI_yuan_keding
+recruit_character = CHI_yang_hucheng
+recruit_character = CHI_yan_xishan
+recruit_character = CHI_cai_e
+recruit_character = CHI_long_yun
+recruit_character = CHI_zhao_hengti
+recruit_character = CHI_jin_shuren
+recruit_character = CHI_ch_eng_te_ch_uan
+recruit_character = CHI_zhao_bingjun
+recruit_character = CHI_xiong_xiling
+recruit_character = CHI_tu_hsi_kuei
+recruit_character = CHI_ch_en_ch_i_mei
+recruit_character = CHI_tang_shaoyi
+recruit_character = CHI_chang_ching_hui
+recruit_character = CHI_liang_ruhao
+recruit_character = CHI_chin_yun_peng
+recruit_character = CHI_zhou_xuexi
+recruit_character = CHI_ch_en_lu
+recruit_character = CHI_zhu_qiqian
+recruit_character = CHI_liu_guanxiong
+recruit_character = CHI_wang_shih_chen
+recruit_character = CHI_tuan_chih_kuei
+recruit_character = CHI_kuo_sung_ling
+recruit_character = CHI_chang_hsueh_liang
+recruit_character = CHI_huang_hsin
+recruit_character = CHI_lu_zhengxiang
+recruit_character = CHI_ch_eng_pi_kuang
+recruit_character = CHI_duan_qirui
+
+# oob = "CHI_1910"
+set_technology = {
+	#infantry
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	bicycle_infantry = 1
+	#artillery
+	gw_artillery = 1
+	#doctrine
+	bayonet_assault = 1
+	#engineering
+	electrical_engineering = 1
+	mechanical_engineering = 1
+	basic_train = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1907.2.15"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 0
+	communism = 0
+	democratic = 0
+	neutrality = 100
+}
+
+add_ideas = {
+	free_trade
+	partial_economic_mobilisation
+}

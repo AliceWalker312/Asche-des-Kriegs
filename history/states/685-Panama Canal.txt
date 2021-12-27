@@ -1,0 +1,16 @@
+state={
+	id=685
+	name="STATE_685"
+	manpower = 39467
+	state_category=enclave
+	provinces={ 7617 }
+	history={
+		victory_points={ 7617 5 }
+		owner=USA
+		add_core_of=PAN
+		buildings={
+			infrastructure = 2
+			7617={ naval_base=3 }
+		}
+	}
+}

@@ -1,0 +1,16 @@
+state={
+	id=731
+	name="STATE_731"
+	manpower=476000
+	state_category=town
+	provinces={ 936 966 9837 10163 }
+	history={
+		victory_points = { 9837 1 }
+		owner=TUR
+		add_core_of = GRE
+		buildings={
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+}

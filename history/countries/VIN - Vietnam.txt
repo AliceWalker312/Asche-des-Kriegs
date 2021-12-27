@@ -1,0 +1,46 @@
+﻿capital = 671
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1910.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 27
+	fascism = 0
+	communism = 0
+	neutrality = 73
+}
+
+recruit_character = VIN_phan_boi_châu
+recruit_character = VIN_nguyen_phúc_vĩnh_san
+recruit_character = VIN_phan_xích_long
+recruit_character = VIN_nguyen_Ái_quoc
+recruit_character = VIN_hoang_trong_mau
+
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Gilbert Trân Chánh Chieu"
+		GFX = GFX_VIN_gilbert_chieu
+		traits = {
+			operative_double_agent
+			operative_infiltrator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = no
+		nationalities = {
+			VIN
+			FRA
+		}
+	}
+}

@@ -1,0 +1,317 @@
+﻿capital = 500
+
+set_research_slots = 3
+set_stability = 0.51
+set_war_support = 0.19
+set_convoys = 42
+
+recruit_character = BRA_nilo_peçanha
+recruit_character = BRA_josé_oiticica
+recruit_character = BRA_joão_alfredo
+recruit_character = BRA_emygdio_dantas_barreto
+
+recruit_character = BRA_ruy_barbosa
+
+recruit_character = BRA_alberto_cardoso_de_aguiar
+recruit_character = BRA_pinheiro_machado
+recruit_character = BRA_hermes_da_fonseca
+recruit_character = BRA_venceslau_brás
+recruit_character = BRA_delfim_moreiras
+recruit_character = BRA_epitácio_pessoa
+recruit_character = BRA_artur_bernardes
+recruit_character = BRA_washington_luís
+recruit_character = BRA_júlio_prestes
+recruit_character = BRA_plínio_salgado
+recruit_character = BRA_minervino_de_oliveira
+recruit_character = BRA_vespasiano_gonçalves_silva
+recruit_character = BRA_antônio_mena_barreto
+recruit_character = BRA_cândido_rondon
+recruit_character = BRA_josé_caetano_de_faria
+recruit_character = BRA_augusto_tasso_fragoso
+recruit_character = BRA_setembrino_de_carvalho
+recruit_character = BRA_isidoro_dias_lopes
+recruit_character = BRA_faria_de_alencar
+recruit_character = BRA_pedro_max_frontin
+recruit_character = BRA_luis_mendes_de_morais
+recruit_character = BRA_domicio_da_gama
+recruit_character = BRA_urbano_santos_da_costa_araujo
+recruit_character = BRA_alberto_santos_dumont
+recruit_character = BRA_jose_verissimo_dias_de_matos
+recruit_character = BRA_lauro_severiano_muller
+recruit_character = BRA_percival_farquhar
+recruit_character = BRA_ricardo_kirk
+recruit_character = BRA_jose_maria_da_silva_paranhos_junior
+recruit_character = BRA_rivadavia_da_cunha_correia
+recruit_character = BRA_edgard_leuenroth
+recruit_character = BRA_avelino_foscolo
+recruit_character = BRA_astrojildo_pereira
+
+recruit_character = BRA_everardo_dias
+recruit_character = BRA_fernando_setembrino_de_carvalho
+recruit_character = BRA_jose_carlos_de_carvalho
+recruit_character = BRA_abilio_de_nequete
+recruit_character = BRA_malvina_tavares
+
+recruit_character = BRA_prince_luís
+recruit_character = BRA_dom_luís_i
+recruit_character = BRA_dom_pedro_iii
+
+recruit_character = BRA_provisional_government_junta
+recruit_character = BRA_getúlio_vargas
+
+
+
+	oob = "BRA_1910"
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+
+		#artillery
+		gw_artillery = 1
+
+		#navy
+		transport = 1
+
+		#air
+		
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+		aircraft_engine = 1
+		basic_train = 1
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1906.11.15" 
+		election_frequency = 48 
+		elections_allowed = yes 
+	}	
+	set_popularities = {
+		fascism = 3
+		communism = 5
+		democratic = 61
+		neutrality = 31
+	}
+
+add_ideas = {	
+	BRA_idea_coronelism
+	BRA_idea_coffee_with_milk
+	BRA_idea_state_armies
+	BRA_idea_outdated_army
+	BRA_idea_amazon_rubber_boom
+	BRA_idea_high_immigration
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		transport = 1
+	}
+
+	set_naval_oob = "BRA_1910_naval_legacy"
+
+	create_equipment_variant = {
+		name = "Minas Geraes Class"
+		type = battleship_2
+		parent_version = 0
+	}
+	create_equipment_variant = {
+		name = "Almirante Tamandaré Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "República Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Bahia Class"
+		type = heavy_cruiser_1
+		parent_version = 0
+	}
+	create_equipment_variant = {
+		name = "Acre Class"
+		type = destroyer_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Deodoro Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Pará Class"
+		type = destroyer_2
+		parent_version = 0
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		basic_naval_mines = 1	
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		improved_medium_battery = 1
+		basic_heavy_battery = 1
+		improved_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		pre_dreadnoughts = 1
+	}
+
+	set_naval_oob = "BRA_1910_naval_mtg"
+
+	create_equipment_variant = {
+		name = "Minas Geraes Class"
+		type = ship_hull_heavy_2
+		name_group = BRA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_2
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Almirante Tamandaré Class"
+		type = ship_hull_cruiser_1
+		name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "República Class"
+		type = ship_hull_cruiser_1
+		name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Bahia Class"
+		type = ship_hull_cruiser_2
+		name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Deodoro Class"
+		type = ship_hull_cruiser_1
+		name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Acre Class"
+		type = ship_hull_light_1
+		name_group = BRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Pará Class"
+		type = ship_hull_light_2
+		name_group = BRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

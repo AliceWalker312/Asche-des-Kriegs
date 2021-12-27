@@ -1,0 +1,22 @@
+
+state={
+	id=619
+	name="STATE_619"
+
+	history={
+		owner = QIN
+		add_core_of = KUM
+		add_core_of = QIN
+		victory_points={ 4704 1 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		1838 4704 4843 7732 10839 12524 12598 12671 
+	}
+	manpower=1430700
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,30 @@
+﻿capital=70
+
+recruit_character = SLO_antonín_janoušek
+recruit_character = SLO_milan_rastislav_Štefánik
+recruit_character = SLO_milan_hodža
+recruit_character = SLO_andrej_hlinka
+
+set_technology = {
+	infantry_weapons = 1
+	support_weapons = 1
+		
+	tech_support = 1
+	tech_engineers = 1
+		
+	gw_artillery = 1
+	basic_train = 1
+}
+	
+set_politics = {
+    ruling_party = democratic
+    last_election = "1910.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+set_popularities = {
+    democratic = 56
+    fascism = 7
+    communism = 6
+    neutrality = 31
+}

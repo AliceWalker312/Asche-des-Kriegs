@@ -1,0 +1,40 @@
+﻿capital = 446
+set_stability = 0.75
+set_convoys = 20
+
+recruit_character = EGY_abbas_ii_helmy
+
+recruit_character = EGY_hussein_kamel
+recruit_character = EGY_fuad_i_muhammad_ali
+
+recruit_character = EGY_archibald_murray
+recruit_character = EGY_arthur_lyndenbell
+
+1910.1.1 = {
+	oob = "EGY_1910"
+	set_research_slots = 3
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		camelry = 1
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		#engineering
+		electrical_engineering = 1
+		basic_train = 1
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		fascism = 0
+		communism = 0
+		democratic = 5
+		neutrality = 95
+	}
+	country_lock_all_division_template = yes
+}

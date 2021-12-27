@@ -1,0 +1,18 @@
+state={
+	id=746
+	name="STATE_746"
+	manpower=45000
+	state_category=enclave
+	provinces={ 4205 }
+
+	history={
+		victory_points = { 4205 1 }
+		owner=ENG
+		add_core_of = QIN
+		1936.1.1={ owner=CHI }
+		buildings={
+			infrastructure = 2
+			4205={ naval_base=2 }
+			}
+		}
+	}

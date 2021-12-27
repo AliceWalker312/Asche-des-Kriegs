@@ -1,0 +1,352 @@
+﻿capital = 112
+
+#-------------------------------------------------------
+#					GENERIC VALUES
+#-------------------------------------------------------
+set_research_slots = 3
+set_stability = 0.32
+set_convoys = 100
+
+recruit_character = POR_manuel_ii
+recruit_character = POR_teófilo_braga
+
+recruit_character = POR_antonio_de_oliveira_salazar
+recruit_character = POR_jose_vicente_de_freitas
+recruit_character = POR_josé_mendes_cabeçadas
+recruit_character = POR_manuel_gomes_da_costa
+recruit_character = POR_josé_vicente_de_freitas
+recruit_character = POR_artur_ivens_ferraz
+recruit_character = POR_Óscar_f._carmona
+recruit_character = POR_josé_m._cabeçadas
+recruit_character = POR_tomas_garcia_rosado
+recruit_character = POR_jose_carlos_de_maia
+recruit_character = POR_joao_martins_de_carvalho
+recruit_character = POR_jose_norton_de_matos
+recruit_character = POR_joao_jose_sinel_de_cordes
+recruit_character = POR_antonio_caetano_macieira_junior
+recruit_character = POR_joaquim_pimenta_de_castro
+recruit_character = POR_antonio_rodrigues_ribeiro
+recruit_character = POR_joao_do_canto_e_castro
+recruit_character = POR_antonio_maria_baptista
+recruit_character = POR_gomes_da_costa
+recruit_character = POR_vitor_hugo_de_azevedo_coutinho
+recruit_character = POR_afonso_augusto_da_costa
+recruit_character = POR_joao_de_sousa_barbosa
+recruit_character = POR_antonio_teixeira_de_sousa
+recruit_character = POR_antonio_joaquim_granjo
+
+
+1910.1.1 = {
+	oob = "POR_1910"
+	ENG = {
+		add_opinion_modifier = {
+			target = POR 
+			modifier  = POR_anglo_portuguese_alliance
+		}
+	}
+
+	POR = {
+		add_opinion_modifier = {
+			target = ENG 
+			modifier  = POR_anglo_portuguese_alliance
+		}
+	}
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		
+		#armored
+		
+		#artillery
+		
+		#doctrine
+		
+		#navy
+		transport = 1
+
+		#air
+		
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+		basic_train = 1
+	}
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 35
+		fascism = 0
+		communism = 1
+		neutrality = 64
+	}
+	add_ideas = {
+		ww1_Scramble_for_Africa
+		POR_unstable_monarchy
+		limited_conscription
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+
+	set_naval_oob = "POR_1910_naval_legacy"
+
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+
+	create_equipment_variant = {
+		name = "Vasco da Gama Class"
+		type = battleship_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Adamastor Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "São Gabriel Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Dom Carlos I Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Rainha Dona Amélia Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Pátria Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Macau Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Limpopo Class"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Tejo Class"
+		type = destroyer_2
+		parent_version = 0
+		obsolete = yes
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_naval_oob = "POR_1910_naval_mtg"
+
+	set_technology = {	
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_medium_battery = 1
+		improved_medium_battery = 1
+		basic_heavy_battery = 1
+		improved_heavy_battery = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_heavy_armor_scheme = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+		pre_dreadnoughts = 1
+	}
+
+	create_equipment_variant = {
+		name = "Vasco da Gama Class"
+		type = ship_hull_pre_dreadnought
+		#name_group = POR_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Adamastor Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "São Gabriel Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Dom Carlos I Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Rainha Dona Amélia Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Pátria Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Macau Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Limpopo Class"
+		type = ship_hull_cruiser_1
+		#name_group = POR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Tejo Class"
+		type = ship_hull_light_2
+		#name_group = POR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+}

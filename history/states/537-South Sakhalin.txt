@@ -1,0 +1,16 @@
+state={
+	id=537
+	name="STATE_537"
+	manpower = 295196
+	state_category=rural
+	provinces= { 1322 1820 12446 	}
+	history={
+		victory_points={ 12446 1 }
+		owner=JAP
+		add_core_of=JAP
+		buildings={
+			infrastructure = 2
+			12446={ naval_base=1  }
+		}
+	}
+}

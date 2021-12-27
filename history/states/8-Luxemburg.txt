@@ -1,0 +1,21 @@
+state = {
+	id = 8
+	name = "STATE_8"
+	manpower = 259047
+	state_category = town
+	provinces = { 6583 }
+	resources = {
+		steel=2 #5
+	}
+	history = {
+		victory_points = { 6583 5 }
+		owner = GER
+		add_core_of =LUX
+		add_core_of =GER
+
+		buildings={
+			infrastructure = 3
+			industrial_complex=2
+		}
+	}
+}

@@ -1,0 +1,18 @@
+state={
+	id=591
+	name="STATE_591"
+	manpower = 4350000
+	state_category=town
+	provinces={ 994 1038 1070 11963 11990 }
+	history={
+		victory_points={ 1070 1 }
+		owner=QIN
+		add_core_of=QIN
+
+		buildings={
+			infrastructure = 1
+			1070={ naval_base=2 }
+		}
+	}
+	local_supplies=1.0 
+}

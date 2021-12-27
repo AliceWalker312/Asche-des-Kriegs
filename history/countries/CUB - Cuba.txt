@@ -1,0 +1,43 @@
+﻿capital = 315
+
+set_research_slots = 3
+set_stability = 0.75
+set_convoys = 20
+set_country_flag = monroe_doctrine
+
+recruit_character = CUB_josé_miguel_gómez
+
+recruit_character = CUB_mario_garcía_menocal
+
+recruit_character = CUB_rafael_montero
+recruit_character = CUB_jose_llanusa_ramon
+recruit_character = CUB_mario_martinez_lufriu
+recruit_character = CUB_carlos_manuel_de_cespedeso
+recruit_character = CUB_rodrigo_a_fuentes
+recruit_character = CUB_sandalio_junco
+recruit_character = CUB_pablo_desvernine
+
+
+set_technology = {
+	#infantry
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	#artillery
+	gw_artillery = 1
+	#engineering
+	basic_train = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1909.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	fascism = 0
+	communism = 3
+	democratic = 64
+	neutrality = 33
+}
